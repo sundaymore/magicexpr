@@ -53,9 +53,11 @@ const是内置的基础指令，表达式{const ABC} 输出ABC字符串
 ## 使用代码示例
 
 (```)
+
 MagicExpression magicExpression = MagicExpression.builder()
             .registerExecutor("seq", SeqExecutor.class).build();
 magicExpression.execute("{const {const A}{const B}}")
+
 (```)
 
 ## 自定义指令
@@ -103,6 +105,7 @@ Map<String,String> contextInfo = new HashMap();
 contextInfo.put("param1","value");
 magicExpression.execute("{env param1}", contextInfo);
 (```)
+
 
 env指令是获取上下文的指令 
 {env param1 local}表示从局部上下文获取，不传默认当local
