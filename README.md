@@ -1,5 +1,6 @@
 # magicexpr: 一个编码生成引擎
 
+
 ## magicexpr可以做什么
 
 在项目中经常会碰到关于编码格式的需求，编码格式不同场景有不同的要求
@@ -110,7 +111,8 @@ magicExpression.execute("{env param1}", contextInfo);
 
 
 env指令是获取上下文的指令 
-{env param1 local}表示从局部上下文获取，不传默认当local
-{env param1 global}表示从全局上下文获取
+
+- {env param1 local}表示从局部上下文获取，不传默认当local
+- {env param1 global}表示从全局上下文获取
 
 
