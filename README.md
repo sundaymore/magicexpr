@@ -7,14 +7,14 @@ magicexpr是为了解决这种具有灵活规则的编码生成问题。magicexp
 
 -----
 
-##案例
+## 案例
 在magicexpr，编码模版的模版是一个表达式，假定前缀为BC，业务编码使用门店id，则表达式的形式类似于：
 {const BC}{time yyyyMMdd}{env shopid}{fix {seq xxx} 5}
 上面的表达式中 const、time、env、fix、seq都是对应一个执行命令，{const BC}中BC是const命令的输入参数，理论上一个指令可以有任意个参数（取决于指令的实现）。
 
 -----
 
-##命令格式 
+## 命令格式 
 一个指令的格式：{指令 参数1 参数2...}
 *1.每个指令都承诺返回一个字符串*
 *2.指令的参数可以是另外一个指令*
@@ -28,17 +28,17 @@ const是内置的基础指令，表达式{const ABC} 输出ABC字符串
 
 -----
 
-##内置指令
+## 内置指令
 
-###const
+### const
 
 常量输出指令
 
-###time
+### time
 
 日期格式化输出指令, 如{time yyyyMMdd}、{time yyyyMMddHHmmss}，注意该指令日期格式中间不支持带空格
 
-###fix
+### fix
 
 按指定长度输出指令，接收3个参数，第一个参数待fix的字符串，第二个参数是指定长度，第三个参数是填充字符，默认0
 {fix ABC 5 0}，输出 00ABC
@@ -50,7 +50,7 @@ const是内置的基础指令，表达式{const ABC} 输出ABC字符串
 
 -----
 
-##使用代码示例
+## 使用代码示例
 
 (```)
 MagicExpression magicExpression = MagicExpression.builder()
@@ -58,7 +58,7 @@ MagicExpression magicExpression = MagicExpression.builder()
 magicExpression.execute("{const {const A}{const B}}")
 (```)
 
-##自定义指令
+## 自定义指令
 
 指令执行器接口定义如下
 (```)
@@ -86,7 +86,7 @@ public interface CommandExecutor {
 
 自定义指令需要实现CommandExecutor接口， 并注册到MagicExpression里面去。在使用示例中已经有使用范例
 
-##上下文
+## 上下文信息
 
 magicexpr提供两种上下文环境，一个是表达式当次执行的上下文，上下文信息仅在当次执行生效，另一个是全局上下文，需要在初始化时注册信息。
 全局上下文注册
