@@ -29,7 +29,7 @@ magicexpr可以拼接出任意格式的编码，提供了一组内置的编码�
 
 备注：const是内置的基础指令，表达式{const ABC} 输出ABC字符串
 
-那么{const {const A}{const B}}是如何执行的。推导过程如下：
+那么对于类似表达式{const {const A}{const B}}是如何执行的。推导过程如下：
 - 1.{const A} -> A 
 - 2.{const B} -> B
 - 3.{const A}{const B} -> AB  *这里两个命令执行结果合并成了一个参数*
