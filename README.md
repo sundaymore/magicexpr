@@ -52,18 +52,17 @@ const是内置的基础指令，表达式{const ABC} 输出ABC字符串
 
 ## 使用代码示例
 
-(```)
+
 
 MagicExpression magicExpression = MagicExpression.builder()
             .registerExecutor("seq", SeqExecutor.class).build();
 magicExpression.execute("{const {const A}{const B}}")
 
-(```)
 
 ## 自定义指令
 
 指令执行器接口定义如下
-(```)
+
 public interface CommandExecutor {
     /**
      * 执行
@@ -84,7 +83,7 @@ public interface CommandExecutor {
      */
     void init(Environment environment);
 }
-(```)
+
 
 自定义指令需要实现CommandExecutor接口， 并注册到MagicExpression里面去。在使用示例中已经有使用范例
 
@@ -92,19 +91,19 @@ public interface CommandExecutor {
 
 magicexpr提供两种上下文环境，一个是表达式当次执行的上下文，上下文信息仅在当次执行生效，另一个是全局上下文，需要在初始化时注册信息。
 全局上下文注册
-(```)
+
 Map<String,String> contextInfo = new HashMap();
 contextInfo.put("param1","value");
 MagicExpression magicExpression = MagicExpression.builder()
             .registerGlobalContextInfos(contextInfo).build();
-(```)
+
 
 LocalThread上下文在执行时作为入参传递
-(```)
+
 Map<String,String> contextInfo = new HashMap();
 contextInfo.put("param1","value");
 magicExpression.execute("{env param1}", contextInfo);
-(```)
+
 
 
 env指令是获取上下文的指令 
