@@ -56,6 +56,9 @@ magicexpr可以拼接出任意格式的编码，提供了一组内置的编码�
 
 {rand_n 5}，输出5位的随机数字串，可能是00001，也可能是99999
 
+### env
+获取环境参数 , {env warehouseId local} or {env name global} 文末解释env
+
 -----
 
 ## 使用代码示例
