@@ -1,4 +1,4 @@
-# magicexpr: 一个字符编码生成引擎
+# magicexpr: 一个编码生成引擎
 
 ## magicexpr可以做什么
 
