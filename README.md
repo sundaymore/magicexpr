@@ -38,7 +38,7 @@ additionally, if there is no outermost brace, such like
 
 
 the engine will wrap it by const command  
-  ```{const {const o}{const k}}
+  ```{const {const o}{const k}}```
 
 
 
