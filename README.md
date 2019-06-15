@@ -15,17 +15,19 @@ and this output the string:
 the above example: the word "const" is command name, "helloworld" is first param of "const".
 
 ## rule
+### three rule
 There is three rules that defines the workflow of code generation engine.  
 - 1. the code engine can only receive one command as input
 - 2. the command contain several params, maybe one? or maybe zero? or maybe more!
 - 3. a param can be a string value, also a param can be a command.
 
-rule 3, means in example:  
+### explain
 
+rule 3, for example:  
 ```{const {const helloworld}}```  
-```{const helloworld}``` is param of the first "const" command  
+in the above expression ```{const helloworld}``` is a param of the first "const" command although the param itself is as a command.  
 
-we can make it go further, to show more complex expression:  
+we can make it go further, to show a more complex expression:  
 
 ```{const {const hello}{const world}} ```  
 
@@ -41,3 +43,4 @@ that is for satisfy the rule 1.
 
 
 ## how to use
+
