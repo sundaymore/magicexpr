@@ -32,7 +32,7 @@ we can make it go further, to show a more complex expression:
   ```{const {const hello}{const world}} ```  
 
 
-additionally, if there is no outermost express like  
+additionally, if there is no outermost brace, such like   
 
   ```{const o}{const k}```  
 
