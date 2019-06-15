@@ -42,9 +42,9 @@ the engine will wrap it by const command
 
 
 
-## how to use
+## get started
 
-### get magicexpr
+- 
 
 
 ### code example
