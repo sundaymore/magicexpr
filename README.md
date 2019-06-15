@@ -86,8 +86,18 @@ public interface CommandExecutor {
     void init(Environment environment);
 }
 ```
+- exec 是指令要执行的接口，Result.output是输出的内容
+- validate 是校验接口，参数校验逻辑放在这里，校验不通过指令不会执行
+- init，接受上下文参数
 
-自定义指令需要实现CommandExecutor接口， 并注册到MagicExpression里面去。在使用示例中已经有使用范例
+
+自定义指令需要实现CommandExecutor接口， 并注册到MagicExpression里面去。注册需要调用registerExecutor方法
+```
+MagicExpression magicExpression = MagicExpression.builder()
+            .registerExecutor("seq", SeqExecutor.class).build();
+magicExpression.execute("{const {const A}{const B}}")
+```
+
 
 ## 上下文信息
 
