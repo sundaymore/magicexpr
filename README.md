@@ -111,7 +111,7 @@ magicExpression.execute("{env param1}", contextInfo);
 
 
 env指令是获取上下文信息的指令 
-- 格式 {env $paramname $contexttype} , $contexttype有local和global两种，local是局部上下文，global是全局上下文
+- 基本格式： {env $paramname $contexttype} , $contexttype有local和global两种，local是局部上下文，global是全局上下文
 示例：
 
 - {env param1 local}表示从局部上下文获取名为param1的变量， 
