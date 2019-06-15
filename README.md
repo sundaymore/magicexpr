@@ -5,14 +5,14 @@ magicexpr is an code generation engine for any format code, by using a group of 
 
 ## expression 
 
-Actually, an expression in magicexpr is just a command that promise to return a string result. and there is a group of inner engine commands as basic commands, and you can expand the command if necessary.  
+Actually, an expression in magicexpr is just a command that promise to return a string result. and there is a group of inner engine commands as basic commands, and you can expand the command set if necessary.  
 
-now let's see a simple expression: 
+let's see a simple expression: 
 ```{const helloworld}```    
-and this output the string: 
+output: 
 ```helloworld```  
 
-the above example: the word "const" is command name, "helloworld" is first param of "const".
+the word "const" is command name, "helloworld" is first param of "const". the function of const command is just return the first param  
 
 ## rule
 ### three rule
