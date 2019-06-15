@@ -44,3 +44,12 @@ the engine will wrap it by const command
 
 ## how to use
 
+### get magicexpr
+
+
+### code example
+```
+MagicExpression magicExpression = MagicExpression.builder().build();
+magicExpression.execute("{const A}")
+```  
+
