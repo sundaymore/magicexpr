@@ -8,9 +8,9 @@ magicexpr is an code generation engine for any format code, by using a group of 
 Actually, an expression in magicexpr is just a command that promise to return a string result. and there is a group of inner engine commands as basic commands, and you can expand the command set if necessary.  
 
 let's see a simple expression: 
-```{const helloworld}```    
+  ```{const helloworld}```    
 output: 
-```helloworld```  
+  ```helloworld```  
 
 the word "const" is command name, "helloworld" is first param of "const". the function of const command is just return the first param  
 
@@ -21,25 +21,25 @@ There is three rules that defines the workflow of code generation engine.
 - 2. the command contain several params, maybe one? or maybe zero? or maybe more!
 - 3. a param can be a string value, also a param can be a command.
 
-### explain
+#### for example
+we can construct a expression like  
+  ```{const {const helloworld}}```  
 
-rule 3, for example:  
-```{const {const helloworld}}```  
-in the above expression ```{const helloworld}``` is a param of the first "const" command although the param itself is as a command.  
+the inner expression ```{const helloworld}``` is as a param of the first "const" command.  
 
+#### go further 
 we can make it go further, to show a more complex expression:  
+  ```{const {const hello}{const world}} ```  
 
-```{const {const hello}{const world}} ```  
 
-additionally, if we input expression like  
+additionally, if there is no outermost express like  
 
-```{const o}{const k}```  
+  ```{const o}{const k}```  
 
-the engine will wrap the expression with "const" command as  
 
-```{const {const o}{const k}}```  
+the engine will wrap it by const command  
+  ```{const {const o}{const k}}
 
-that is for satisfy the rule 1.    
 
 
 ## how to use
