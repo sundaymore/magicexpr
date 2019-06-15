@@ -1,7 +1,7 @@
-# magicexpr: 一个编码生成引擎
+# magicexpr: is an code generate engine for any string like XXXXYYYY which has no space..
 
 
-## magicexpr可以做什么
+## expression 
 
 在项目中经常会碰到关于编码格式的需求，编码格式不同场景有不同的要求
 比如:前缀+业务编号(如仓库id)+日期+自增序号 
