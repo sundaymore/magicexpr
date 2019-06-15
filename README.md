@@ -8,7 +8,7 @@
 magicexpr是为了解决这种具有灵活规则的编码生成问题。
 magicexpr可以拼接出任意格式的编码，提供了一组内置的编码生成命令，并且可以实现自定义指令生成特殊编码段。
 
------
+
 
 ## 案例
 在magicexpr，编码模版的模版是一个表达式，在前缀+业务编号(如仓库id)+日期+自增序号 场景中假定前缀为BC，业务编码使用门店id，则表达式的形式类似于:
@@ -18,7 +18,7 @@ magicexpr可以拼接出任意格式的编码，提供了一组内置的编码�
 上面的表达式中 const、time、env、fix、seq都是对应一个执行命令，```{const BC}```中BC是const命令的输入参数,
 理论上一个指令可以有任意个参数（取决于指令的实现）。
 
------
+
 
 ## 命令格式 
 
@@ -35,7 +35,7 @@ magicexpr可以拼接出任意格式的编码，提供了一组内置的编码�
 - 3.{const A}{const B} -> AB  *这里两个命令执行结果合并成了一个参数*
 - 4.{const {const A}{const B}} -> {const AB} -> AB  
 
------
+
 
 ## 内置指令
 
@@ -60,7 +60,7 @@ magicexpr可以拼接出任意格式的编码，提供了一组内置的编码�
 ### env
 获取环境参数 , {env warehouseId local} or {env name global} 文末解释env
 
------
+
 
 ## 使用代码示例
 
@@ -110,9 +110,11 @@ magicExpression.execute("{env param1}", contextInfo);
 ```
 
 
-env指令是获取上下文的指令 
+env指令是获取上下文信息的指令 
+- 格式 {env $paramname $contexttype} , $contexttype有local和global两种，local是局部上下文，global是全局上下文
+示例：
 
-- {env param1 local}表示从局部上下文获取，不传默认当local
+- {env param1 local}表示从局部上下文获取名为param1的变量， 
 - {env param1 global}表示从全局上下文获取
 
 
