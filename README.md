@@ -21,5 +21,7 @@ There is three rules that defines the workflow of code generation engine.
 - 3. a param can be a string value, also a param can be a command.
 
 rule 3, means in example: {const {const helloworld}}, {const helloworld} is param of the first "const" command  
-we can make it further, to show more complex expression: {const {const hello}{const world}}
+we can make it go further, to show more complex expression: {const {const hello}{const world}}  
+additionally, if we input expression like {const o}{const k}, the engine will wrap the expression with "const" command as {const {const o}{const k}}, for satisfy rule 1.  
 
+## how to use
