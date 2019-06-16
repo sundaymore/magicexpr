@@ -55,7 +55,10 @@ magicExpression.execute("{const A}")
 ### inner command
 - const  
 const return the value of its first param  
-{const helloworld}  
+expression: 
+ {const helloworld}  
+output:  
+helloworld
 
 - fix
 - env
