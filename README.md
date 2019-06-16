@@ -53,14 +53,14 @@ magicExpression.execute("{const A}")
 ```  
 
 ### inner command
-- const  
-const return the value of its first param  
-expression: 
+- *const*  
+*const* return the value of its first param  
+*expression*: 
  {const helloworld}  
-output:  
-helloworld
+*output*: helloworld
 
 - fix
+
 - env
 - rand_n
 - rand_c
