@@ -54,12 +54,21 @@ magicExpression.execute("{const A}")
 
 ### inner command
 - const 
+const return the value of its first param  
+{const helloworld}  
+
 - fix
 - env
 - rand_n
 - rand_c
 
+example:  
 
+####const
+ 
+
+####fix
+fix command can fix a string to specify length, it has two params
 
 
 ### custom command
