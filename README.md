@@ -53,24 +53,30 @@ magicExpression.execute("{const A}")
 ```  
 
 ### inner command
-- *const*:  
-*const* command return the value of its first param  
-example:
+####const
+
+const command return the value of its first param  
 {const helloworld}  >> helloworld
 
-- fix
+####fix
 
-- env
+fix command can fix a string lenth to specified size  
+format {fix $str $size $fill}  
+
+{fix 1 5 0}  >> 00001  
+{fix kfc 10 fuck}  >> uckfuckkfc
+
+####env
+env command can visit magicexpr context. there are two context type, localcontext and globalcontext.  
+localcontext lifecycle is valid only at current expression runtime and globalcontext is always valid since MagicExpression created.  
+
+
+
 - rand_n
 - rand_c
 
-example:  
 
-####const
- 
 
-####fix
-fix command can fix a string to specify length, it has two params
 
 
 ### custom command
