@@ -70,11 +70,29 @@ format {fix $str $size $fill}
 env command can visit magicexpr context. there are two context type, localcontext and globalcontext.  
 localcontext lifecycle is valid only at current expression runtime and globalcontext is always valid since MagicExpression created.  
 
-##### local context
-##### global context
+##### local context example
+
+```
+Map context = new HashMap();
+context.put("name", "sundaymore");
+MagicExpression magicExpression = MagicExpression.builder().build();
+magicExpression.execute("{env name}", context);
+```
+output >> sundaymore
 
 
-#### rand_n
+##### global context example
+  
+```
+MagicExpression magicExpression = MagicExpression.builder().registerGlobalContext("name","sundaymore").build();
+magicExpression.execute("{env name}")
+```
+output >> sundaymore  
+
+
+#### other command
+
+....
 
 
 
