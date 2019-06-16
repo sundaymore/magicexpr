@@ -14,18 +14,19 @@ output:
 
 the word "const" is command name, "helloworld" is first param of "const". the function of const command is just return the first param  
 
-## rule
-### three rule
-There is three rules that defines the workflow of code generation engine.  
-- 1. the code engine can only receive one command as input
-- 2. the command contain several params, maybe one? or maybe zero? or maybe more!
-- 3. a param can be a string value, also a param can be a command.
+## principle
+### three base rule
+There is three base rules that defines the workflow of code generation engine and make it completeness  
+
+- 1. the code engine can only receive one command as input expression
+- 2. the command contain several params, maybe one, maybe zero, or maybe more
+- 3. a param can either be as a string type, or command type.
 
 #### for example
-we can construct a expression like  
-  ```{const {const helloworld}}```  
+the third rule means that we can construct a expression like  
+  ```{cmd1 {cmd2 helloworld}}```  
 
-the inner expression ```{const helloworld}``` is as a param of the first "const" command.  
+the inner expression ```{cmd2 helloworld}``` is param of the “cmd1” command.  
 
 #### go further 
 we can make it go further, to show a more complex expression:  
@@ -42,9 +43,7 @@ the engine will wrap it by const command
 
 
 
-## get started
-
-- 
+## get start
 
 
 ### code example
