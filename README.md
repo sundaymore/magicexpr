@@ -46,11 +46,21 @@ the engine will wrap it by const command
 ## get start
 
 
-### code example
+### use example
 ```
 MagicExpression magicExpression = MagicExpression.builder().build();
 magicExpression.execute("{const A}")
 ```  
+
+### inner command
+- const 
+- fix
+- env
+- rand_n
+- rand_c
+
+
+
 
 ### custom command
 define a custom command has two step
