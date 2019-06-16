@@ -54,10 +54,9 @@ magicExpression.execute("{const A}")
 
 ### inner command
 - *const*:  
-*const* return the value of its first param  
-expression sample
- {const helloworld}  
-output helloworld
+*const* command return the value of its first param  
+example:
+{const helloworld}  >> helloworld
 
 - fix
 
