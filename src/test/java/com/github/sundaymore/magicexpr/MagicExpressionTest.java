@@ -29,4 +29,17 @@ public class MagicExpressionTest {
         MagicExpression magicExpression = MagicExpression.builder().registerExecutor("hello", HelloCommandExecutor.class).build();
         System.out.println(magicExpression.execute("{hello sunday}"));
     }
+
+    @Test
+    public void testTime(){
+        MagicExpression magicExpression = MagicExpression.builder().build();
+        System.out.println(magicExpression.execute("{time yyyyMMdd}"));
+    }
+
+    @Test
+    public void testMultiCommand(){
+        MagicExpression magicExpression = MagicExpression.builder().registerGlobalContextInfo("number", "987").build();
+
+        System.out.println(magicExpression.execute("{const SLT{env number global}}{const -}{time yyyyMMdd}"));
+    }
 }
